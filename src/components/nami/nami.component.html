@@ -1,0 +1,15 @@
+<h1>Olá, meu nome é {{ name }}</h1>
+
+<!-- <div>
+    <button (click) = "count = count + 1"> Some Aqui +1 </button>
+    <h3>{{ count }}</h3>
+</div> -->
+
+<!-- <button (click) = "increment()" > Clique aqui para somar -->
+<button (click) = "increment()" [disabled]= "count >= 5"> Clique aqui para somar
+    <h3> {{ count }} </h3>
+</button>
+
+<img [src]= "imgSource" style="width: 60%;">
+
+<input type= "text" value="Olá" [disabled]="disable">

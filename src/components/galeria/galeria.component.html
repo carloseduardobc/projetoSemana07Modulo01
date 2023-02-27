@@ -1,0 +1,24 @@
+<!-- <div class="jumbotron"> -->
+<div>
+
+    <h3> {{ titulo }} </h3>
+
+    <!-- <div>
+        <img [src]= "fotos"> -->
+    <div *ngIf = "fotos.length > 0">
+        <img [src] = "fotos[fotoAtual]" style="width: 50%;">
+        
+        <div>
+            Foto {{ fotoAtual + 1 }} de {{ fotos.length }}
+        </div>
+
+        <div>
+            <button (click)="voltarParaPrimeira()" [disabled]="fotoAtual == primeira()" class="btn btn-primary" type="button"> Primeira </button>
+            <button (click)="voltarParaAnterior()" [disabled]="fotoAtual == primeira()" class="btn btn-primary" type="button"> < </button>
+            <button (click)="vaiParaProxima()" [disabled]="fotoAtual == ultima()" class="btn btn-primary" type="button"> > </button>
+            <button (click)="vaiParaUltima()" [disabled]="fotoAtual == ultima()"class="btn btn-primary" type="button"> Última  </button>
+        </div>
+        
+    </div>
+
+</div>
